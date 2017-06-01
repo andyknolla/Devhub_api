@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  url: MyString
+  rating: 1
+  description: MyString
+  free: false
+  category: one
+  resource_type: one
+
+two:
+  title: MyString
+  url: MyString
+  rating: 1
+  description: MyString
+  free: false
+  category: two
+  resource_type: two
