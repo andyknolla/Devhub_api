@@ -13,11 +13,11 @@ class ResourcesController < ApplicationController
 
   def show
     render json: @resource
-    # json_response(@resource)
   end
 
   def update
-
+    @resource.update(resource_params)
+    json_response(@resource)
   end
 
   def destroy
@@ -36,14 +36,3 @@ class ResourcesController < ApplicationController
   end
 
 end
-
-
-# {
-# 		"title": "Title 0",
-# 		"url": "Url 0",
-# 		"rating": 5,
-# 		"description": "Dirka dirka crash pad cold shut bi-pattern chains a tagline wall crack limestone aid.  Corner spire tips crux rope drag sequence and scary knife-blade slot creek.  Auto-block biner crystal anchor descent and equalette...dirka",
-# 		"free": false,
-# 		"category_id": 2,
-# 		"resource_type_id": 2
-# 	}
