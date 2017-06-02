@@ -1,0 +1,2 @@
+class TagResourcesController < ApplicationController
+end
