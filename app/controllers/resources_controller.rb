@@ -28,7 +28,19 @@ class ResourcesController < ApplicationController
   private
 
   def set_resource
-    @resource = Resource.find(params[:id])
+    @resource = Resource
+                  .select('resources.id,
+                          resources.title,
+                          resources.url,
+                          resources.free,
+                          resources.description,
+                          resources.rating,
+                          resource_types.name AS type_name,
+                          categories.name AS category_name')
+                  .joins(:category, :resource_type)
+                  .find(params[:id])
+
+    #Category.select('resource.id, resource.title, category.name').joins(:resources).distinct
   end
 
   def resource_params

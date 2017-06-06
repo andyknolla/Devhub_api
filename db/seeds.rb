@@ -4,11 +4,13 @@
   )
 end
 
-3.times do |category|
-  Category.create!(
-    name: "Javascript? #{category}"
-  )
-end
+  Category.create!(name: "JavaScript")
+  Category.create!(name: "Ruby on Rails")
+  Category.create!(name: "Front-end Frameworks")
+  Category.create!(name: "Cheatsheet")
+  Category.create!(name: "CSS")
+  Category.create!(name: "Object Oriented Programming")
+
 
 3.times do |type|
   ResourceType.create!(
